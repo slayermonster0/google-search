@@ -6,7 +6,8 @@ const URL = "https://www.googleapis.com/books/v1/volumes?q=";
 export default {
   // Search for books
   searchBooks: (query) => {
-    //console.log(query);
+    console.log(query, APIKEY);
+    
     return axios.get(URL + query + APIKEY).then(function(response){
       console.log(response);
     }).catch(function(error){
