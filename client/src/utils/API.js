@@ -7,7 +7,12 @@ export default {
   // Search for books
   searchBooks: (query) => {
     //console.log(query);
-    return axios.get(URL + query + APIKEY);
+    return axios.get(URL + query + APIKEY).then(function(response){
+      console.log(response);
+    }).catch(function(error){
+      console.log(error);
+    });
+
   },
    // Saves a book to the database
   saveBook: function(bookData) {
