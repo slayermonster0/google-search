@@ -34,6 +34,7 @@ class Search extends Component {
   // on form sumbit -> search for books
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log("this working");
     API.searchBooks(this.state.search)
       .then(res => {
         console.log(res.data.items);
