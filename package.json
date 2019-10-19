@@ -7,7 +7,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "\"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && yarn install",
     "build": "cd client && npm run build",
@@ -16,16 +16,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.0.0",
+    "concurrently": "^3.5.0",
     "nodemon": "^1.19.4"
   },
   "dependencies": {
-    "@material-ui/core": "^4.5.1",
-    "@material-ui/icons": "^4.5.1",
-    "axios": "^0.19.0",
-    "express": "^4.17.1",
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.7.5"
+    "mongoose": "^5.3.13"
   },
   "engines": {
     "node": "12.12.0"
