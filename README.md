@@ -1,10 +1,29 @@
-# Google Book Search
-https://google-sarch.herokuapp.com
-## About 
-there is an issue where if you search for a real book like "Battle of the Labyrinth" in the console it detects the book name and grabs the apikey then it gives a 400error code(bad request) even though the whole url is correct. but if you put a random name like "book" nothing happens at all we dont understand why this is happening.
+# Create React Express App
 
-google book api
+## About This Boilerplate
 
-## MERN Stack
-* MongoDB, Express.js, React.js, and Node.js
-* Google Books API
+This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+
+The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+
+## Starting the app locally
+
+Start by installing front and backend dependencies. While in this directory, run the following command:
+
+```
+yarn install
+```
+
+This should install node modules within the server and the client folder.
+
+After both installations complete, run the following command in your terminal:
+
+```
+yarn start
+```
+
+Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+
+## Deployment (Heroku)
+
+To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
